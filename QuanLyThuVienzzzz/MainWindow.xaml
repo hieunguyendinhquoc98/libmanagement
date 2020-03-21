@@ -1,0 +1,335 @@
+﻿<Window x:Class="QuanLyThuVienzzzz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyThuVienzzzz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.ColumnSpan="8">
+            <materialDesign:ColorZone
+             Mode="PrimaryDark"
+             Padding="16">
+                <DockPanel>
+                    <StackPanel
+                Orientation="Horizontal"
+                materialDesign:RippleAssist.IsCentered="True">
+                        <ToggleButton 
+                            Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Checked="ToggleButton_Checked_1" >
+                            <Menu Height="100" Width="100"/>
+                        </ToggleButton>
+                        <TextBlock
+                        VerticalAlignment="Center"
+                        Margin="8 0 0 0">
+                            THƯ VIỆN TRƯỜNG THPT CHUYÊN BÌNH LONG
+                        </TextBlock>
+                        <materialDesign:ColorZone
+                     Mode="Standard"
+                     Padding="8 4 8 4"
+                     CornerRadius="2"
+                     Panel.ZIndex="1"
+                     Margin="35 0 0 0"
+                     materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Button
+                                Style="{DynamicResource MaterialDesignToolButton}">
+                                    <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
+                                </Button>
+                                <TextBox
+                            Grid.Column="1"
+                            Margin="8 0 0 0"
+                            materialDesign:HintAssist.Hint="Tìm kiếm sách theo tên"
+                            materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                            BorderThickness="0"
+                            MinWidth="200"
+                            VerticalAlignment="Center" />
+                            </Grid>
+                        </materialDesign:ColorZone>
+
+                    </StackPanel>
+                </DockPanel>
+            </materialDesign:ColorZone>
+        </Grid>
+        <Button Grid.Row="0"   
+            Style="{StaticResource MaterialDesignRaisedAccentButton}"
+            Width="110"
+            ToolTip="Resource name: MaterialDesignRaisedButton" 
+            Content="Đăng Nhập"
+            VerticalContentAlignment="Center"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Background="CadetBlue"
+            Margin="0,19,28,0" 
+            Click="Button_DangNhap" Grid.Column="7">
+        </Button>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Toán học</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto" Click="Button_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/toán.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Hóa học</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto" Click="Button_Click_1"> 
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/hóa.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Vật lý</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/vật lý.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center">Ngữ văn</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/văn.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Sinh học</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/sinh.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Địa lý</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/địa.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> GDCD</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/GDCD.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Lịch sử</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/lịch sử.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Tin học</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/tin học.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Công nghệ</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/công nghệ.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Tiếng anh</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/tiếng anh.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Tuyển tập các đề thi</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/đề thi.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Sách tổng hợp</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/sách tổng hợp.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock HorizontalAlignment="Center"> Sách biển đảo</TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button Width="Auto" Height="Auto">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Images/biển đảo.jpg"/>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>

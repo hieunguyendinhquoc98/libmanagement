@@ -1,0 +1,135 @@
+﻿<Window x:Class="QuanLyThuVienzzzz.CreateAccount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyThuVienzzzz"
+        mc:Ignorable="d"
+        Title="Tạo tài khoản" Height="700" Width="600"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <materialDesign:Card Height="669" Width="592" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="15 15 15 0"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Tên Đăng Nhập"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <PasswordBox 
+                        x:Name="FloatingPasswordBox"
+                        materialDesign:HintAssist.Hint="Mật khẩu"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" VerticalAlignment="Top" />
+                </Grid>
+                <Grid Grid.Row="2">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Họ và tên"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top"/>
+                </Grid>
+
+                <Grid Grid.Row="3">
+                    <DatePicker
+                        Width="Auto"
+                        materialDesign:HintAssist.Hint="Ngày sinh"
+                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}" VerticalAlignment="Top" Margin="0,-9,0,0" />
+                </Grid>
+
+                <Grid Grid.Row="4">
+                    <DatePicker
+                        Width="Auto"
+                        materialDesign:HintAssist.Hint="Ngày vào làm"
+                        Style="{StaticResource MaterialDesignFloatingHintDatePicker}" VerticalAlignment="Top" Margin="0,-9,0,0" />
+                </Grid>
+                <Grid Grid.Row="5">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Chức vụ"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="0,-6,0,0"/>
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Số điện thoại"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="0,36,0,-37" Height="44"/>
+                </Grid>
+                <Grid Grid.Row="6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="425*"/>
+                        <ColumnDefinition Width="107*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+                <Grid Grid.Row="7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="41*"/>
+                        <ColumnDefinition Width="92*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Địa chỉ"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Margin="0,10,0,-8" Grid.ColumnSpan="2"/>
+                </Grid>
+                <Grid Grid.Row="8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="409*"/>
+                        <ColumnDefinition Width="124*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Email"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                </Grid>
+                <Grid Grid.Row="9">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Ghi chú"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Top"/>
+                </Grid>
+                <Grid Grid.Row="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Button     
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                        Width="120"
+                        ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"
+                            Content="Tạo tài khoản"
+                            Click="Button_TaoTK" VerticalAlignment="Bottom">
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button
+                        Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                        Width="120"
+                        ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"
+                        Content="Thoát" 
+                            Click="Button_Thoat" VerticalAlignment="Bottom">
+                        </Button>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>
+

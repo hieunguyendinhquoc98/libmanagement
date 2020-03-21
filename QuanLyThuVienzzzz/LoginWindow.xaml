@@ -1,0 +1,67 @@
+﻿<Window x:Class="QuanLyThuVienzzzz.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyThuVienzzzz"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="300" Width="450"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="15 15 15 0"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBox
+                        materialDesign:HintAssist.Hint="Tên Đăng Nhập"
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <PasswordBox 
+                        x:Name="FloatingPasswordBox"
+                        materialDesign:HintAssist.Hint="Mật khẩu"
+                        Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Button     
+                        Style="{StaticResource MaterialDesignRaisedDarkButton}"
+                        Width="110"
+                        ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"
+                            Content="Đăng Nhập"
+                            Click="Button_DangNhap">
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button
+                        Style="{StaticResource MaterialDesignRaisedAccentButton}"
+                        Width="110"
+                        ToolTip="Resource name: MaterialDesignRaisedLightDarkButton"
+                        Content="Đăng ký" 
+                            Click="Button_DangKy">
+                        </Button>
+                    </Grid>
+                </Grid>
+          </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,139 @@
+﻿<Window x:Class="QuanLyThuVienzzzz.StaffManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuanLyThuVienzzzz"
+        mc:Ignorable="d"
+        Title="StaffManagerWindow" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid>
+        <materialDesign:ColorZone
+             Mode="PrimaryDark"
+             Padding="16" Height="74">
+            <DockPanel>
+                <StackPanel
+                Orientation="Horizontal"
+                materialDesign:RippleAssist.IsCentered="True">
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        Margin="8 0 0 0">
+                            THƯ VIỆN TRƯỜNG THPT CHUYÊN BÌNH LONG
+                    </TextBlock>
+                    <materialDesign:ColorZone
+                     Mode="Standard"
+                     Padding="8 4 8 4"
+                     CornerRadius="2"
+                     Panel.ZIndex="1"
+                     Margin="35 0 0 0"
+                     materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Button
+                                Style="{DynamicResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
+                            </Button>
+                            <TextBox
+                            Grid.Column="1"
+                            Margin="8 0 0 0"
+                            materialDesign:HintAssist.Hint="Tìm kiếm sách"
+                            materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                            BorderThickness="0"
+                            MinWidth="260"
+                            VerticalAlignment="Center" />
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Button
+                            Style="{DynamicResource MaterialDesignToolForegroundButton}"
+                            Margin="8 0 0 0"
+                            Panel.ZIndex="0">
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+        <Button
+            Grid.Row="1"
+             Style="{StaticResource MaterialDesignRaisedAccentButton}"
+             Width="110"
+             ToolTip="Resource name: MaterialDesignRaisedButton" 
+             Content="Đăng xuất"
+             VerticalContentAlignment="Center"
+             HorizontalAlignment="Right"
+             VerticalAlignment="Top"
+             Background="Red"
+             Margin="0,19,15,0" Click="Button_Click" BorderBrush="#FFCB1111"/>
+        <Grid Grid.Row="0" Margin="0,134,-8,283">
+            <Image Grid.Row="3" Source="C:\Users\nguye\OneDrive\Desktop\Quản Lý Thư Viện\Photo.JPG" Stretch="UniformToFill"/>
+        </Grid>
+        <Grid Grid.Row="0" Margin="0,74,-8,285">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+            <Button
+                Height="60"
+                Grid.Column="0"
+                Background="DeepSkyBlue"
+                Command="{Binding AddBooksCommand}"
+                CommandParameter="{Binding ElementName=administratorWindow}"
+                ToolTip="Nhập Kho Sách" ToolBar.OverflowMode="AsNeeded" VerticalAlignment="Top">
+                <materialDesign:PackIcon Height="28" Width="28"  Kind="FileImport" />
+            </Button>
+            <Button
+                Height="60"
+                Grid.Column="1"
+                Background="DeepSkyBlue"
+                Command="{Binding ExportHiredBookReceiptCommand}"
+                CommandParameter="{Binding ElementName=administratorWindow}"
+                ToolTip="Xuất Báo Cáo" ToolBar.OverflowMode="AsNeeded" VerticalAlignment="Top">
+                <materialDesign:PackIcon Height="28" Width="28"  Kind="CloudPrint" />
+            </Button>
+            <Button
+                Height="60"
+                Grid.Column="2"
+                VerticalContentAlignment="Center"
+                Background="DeepSkyBlue"
+                Command="{Binding AddHiredBookReceiptCommand}"
+                CommandParameter="{Binding ElementName=administratorWindow}"
+                ToolTip="Đăng Kí Mượn Sách" ToolBar.OverflowMode="AsNeeded" VerticalAlignment="Top">
+                <materialDesign:PackIcon Height="28" Width="28" Kind="NotePlus" />
+            </Button>
+            <Button
+                Height="60"
+                Grid.Column="3"
+                Background="DeepSkyBlue"
+                Command="{Binding StaffManagementCommand}"
+                CommandParameter="{Binding ElementName=administratorWindow}"
+                ToolTip="Quản Lý Nhân Viên" ToolBar.OverflowMode="AsNeeded" VerticalAlignment="Top">
+                <materialDesign:PackIcon Height="28" Width="28" Kind="AccountEdit" />
+            </Button>
+            <Button
+                Height="60"
+                Grid.Column="4"
+                Background="DeepSkyBlue"
+                Command="{Binding StaffManagementCommand}"
+                CommandParameter="{Binding ElementName=administratorWindow}"
+                ToolTip="Quản Lý Nhân Viên" ToolBar.OverflowMode="AsNeeded" VerticalAlignment="Top">
+                <materialDesign:PackIcon Height="28" Width="28" Kind="AccountSearch" />
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
+
